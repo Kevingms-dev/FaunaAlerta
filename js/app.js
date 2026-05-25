@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!nomeCadastro || !emailCadastro || !telCadastro || !senhaCadastro) {
                 alert("Por favor, preencha todos os campos obrigatórios.");
                 return;
-            } // CORRIGIDO: Fechamento correto da chave do IF de validação
+            } //Fechamento correto da chave do IF de validação
 
             // cria um objeto para agrupar as informações do usuario
             const cadastro = {nomeCadastro, emailCadastro, telCadastro, senhaCadastro};
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (usuario === "admin@faunaalerta.com.br") {
                     window.location.href = "adm.html";
                 } else {
-                    window.location.href = "index.html"; // Mude para a página inicial do usuário
+                    window.location.href = "perfil.html"; // Mude para a página inicial do usuário
                 }
             }
         }
