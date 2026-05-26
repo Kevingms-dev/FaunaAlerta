@@ -130,14 +130,19 @@ body {
 
 /*ESTILIZAÇÃO DO BOTÃO DE LOGOUT*/
 .botaosair {
-    border: 3px solid #D47E35;
-    border-radius: 100px;
-    border-width: 10px;
-    color:#D47E35;
-    padding: 20px;
-    font-size: 64px;
-    font-family: 'Archivo Black', sans-serif;
+    margin-top: 5vh ;                         /*espacamento entre o campo de descricao*/
+    margin-bottom: 20vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    border: 3px solid #D47E09;              /*define tamanho e cor da borda*/
+    color: #D47E09;                         /*cor da fonte*/
+    font-family: 'Archivo Black', sans-serif;   /*Qual fonte?*/
+    font-size: 1.2rem;                          /*tamanho da fonte em relacao ao tamanho original do navegador*/
+    padding: 8px 50px;                          /*espacamento interno, entre o texto e as bordas*/
+    border-radius: 30px;                        /*deixa o botao com pontas curvas*/
+    transition: 0.3s ease;                      /*efeito de transicao*/
 }
+
 
 /*ALINHAMENTO DO BOTÃO DE LOGOUT*/
 .sair-container {
