@@ -160,6 +160,47 @@
     color: #bbb;
 }
 
+/* ===== CARROSSEL NOTÍCIAS ===== */
+
+.noticia-img{
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.custom-caption{
+    bottom: 20%;
+}
+
+.custom-caption h3{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.custom-caption p{
+    font-size: 1rem;
+    color: #f1f1f1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Responsividade */
+@media(max-width:768px){
+
+    .noticia-img{
+        height: 300px;
+    }
+
+    .custom-caption h3{
+        font-size: 1.3rem;
+    }
+
+    .custom-caption p{
+        font-size: 0.85rem;
+    }
+}
+
 /* -----------------------------------------------
    PARCEIROS
    ----------------------------------------------- */
