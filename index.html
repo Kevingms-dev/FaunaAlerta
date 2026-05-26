@@ -20,9 +20,6 @@
     <!--LINK COM CSS-->
     <link rel="stylesheet" href="css/index.css">
 
-    <!--CSS DA PÁGINA-->
-    <link rel="stylesheet" href="css/index.css">
-
     <!--ICONE NA ABA DO NAVEGADOR-->
     <link rel="icon" type="image/png" href="img/Logo.ico">
     
@@ -86,21 +83,77 @@
         </section>
  
         <!-- ===== NOTÍCIAS (seção reservada para carrossel futuro) ===== -->
-        <section class="noticias py-5">
-            <div class="container">
- 
-                <h2 class="section-title text-center mb-4">NOTÍCIAS</h2>
- 
-                <!-- Placeholder: carrossel ainda não sei fazer -->
-                <div class="noticias-placeholder text-center">
-                    <p class="placeholder-texto">
-                        <i class="bi bi-newspaper me-2"></i>
-                        Carrossel de notícias em breve
-                    </p>
-                </div>
- 
+        <!-- ===== NOTÍCIAS ===== -->
+<section class="noticias py-5">
+    <div class="container">
+
+        <h2 class="section-title text-center mb-4">NOTÍCIAS</h2>
+
+        <div id="carouselNoticias" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="2"></button>
             </div>
-        </section>
+
+            <!-- Slides -->
+            <div class="carousel-inner rounded-4 overflow-hidden shadow">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="img/noticiaa1.jpg" class="d-block w-100 noticia-img" alt="Notícia 1">
+
+                    <div class="carousel-caption custom-caption">
+                        <h3>Resgate de animais silvestres cresce no Brasil</h3>
+                        <p>
+                            Organizações ambientais registram aumento nas denúncias
+                            e salvamentos de fauna em áreas urbanas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="img/noticia2.jpeg" class="d-block w-100 noticia-img" alt="Notícia 2">
+
+                    <div class="carousel-caption custom-caption">
+                        <h3>Combate ao tráfico de animais é intensificado</h3>
+                        <p>
+                            Autoridades ambientais reforçam operações em rodovias
+                            e fronteiras brasileiras.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="img/noticia3.jpg" class="d-block w-100 noticia-img" alt="Notícia 3">
+
+                    <div class="carousel-caption custom-caption">
+                        <h3>Educação ambiental nas escolas</h3>
+                        <p>
+                            Projetos educativos incentivam crianças e jovens
+                            a protegerem a fauna brasileira.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Botões -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoticias" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselNoticias" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </div>
+</section>
  
         <!-- ===== PARCEIROS ===== -->
         <section class="parceiros py-5">
@@ -152,6 +205,7 @@
     <div id="footer"></div>
 
 <!-- SCRIPTS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/js/components.js"></script>
 </body>
 </html>
