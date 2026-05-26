@@ -4,6 +4,15 @@ Estilização da página perfil.html
 ============================================================
 */
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d9d9d9;
+}
+
 /*DEFININDO TAMANHO DA FOTO*/
 .box-perfil {
     width: 150px; 
@@ -27,7 +36,7 @@ Estilização da página perfil.html
 
 /*ESTILIZAÇÃO DA FONTE DO TÍTULO DO HISTÓRICO DE DENÚNCIA */
 .titulo-historico h2 {
-    color: #000000;
+    color: #ffffff;
     font-weight: 700;
     padding: 10px;
 }
@@ -65,12 +74,21 @@ Estilização da página perfil.html
 /*ESTILIZAÇÃO DO BOTÃO VERIFICAR DENTRO DO CARD DE DENÚNCIA*/
 .botao-verificar {
     border: none;
-    background-color: #D47E09;
-    color:#000;
+    background-color: #d47e35;
+    color:#ffffff;
     border-radius: 12px;
     padding: 10px 15px;
-    font-weight: bold;
+    font-family: 'Archivo Black', sans-serif;
     font-size: 25px;
+}
+
+
+/*ESTILIZAÇÃO DO HOVER DO BOTÃO DE VERIFICAR*/
+.botao-verificar:hover {
+    color: #000;
+    border: 3px solid #D47E35;
+    border-width: 3px;
+    background-color: #cccccc;
 }
 
 /*ESTILIZAÇÃO DO TIPO DE DENÚNCIA, PRESENTE NO CARD DE DENÚNCIA*/
@@ -95,9 +113,45 @@ Estilização da página perfil.html
     background-color: #D47E35;
     border: none;
     border-radius: 12px;
-    color: #000000;
-    font-weight: bold;
+    color: #ffffff;
     padding: 10px;
     font-size: 30px;
     margin: 20px;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/*ESTILIZAÇÃO DO HOVER DO BOTÃO DE CARREGAR MAIS DENÚNCIAS*/
+.botao-carregar:hover {
+    color: #000;
+    border: 3px solid #D47E35;
+    border-width: 3px;
+    background-color: #ffffff;
+}
+
+/*ESTILIZAÇÃO DO BOTÃO DE LOGOUT*/
+.botaosair {
+    border: 3px solid #D47E35;
+    border-radius: 100px;
+    border-width: 10px;
+    color:#D47E35;
+    padding: 20px;
+    font-size: 64px;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/*ALINHAMENTO DO BOTÃO DE LOGOUT*/
+.sair-container {
+    display: flex;
+    justify-content: center;
+}
+
+/*ESTILIZAÇÃO DO HOOVER DO BOTÃO DE LOGOUT*/
+.botaosair:hover {
+    background-color: #D47E35;
+    color: #ffffff
+}
+
+/*ESTILIZAÇÃO DO CLIQUE DO BOTÃO DE LOGOUT*/
+.botaosair:active {
+    color:#000;
 }
