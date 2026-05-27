@@ -34,10 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-// Verificar se já existe uma sessão ativa ao carregar a página
-verificarLogin();
-
 function fazerLogin() {
     // Pegar os valores digitados no form
     let usuario = document.getElementById("email").value.trim();
