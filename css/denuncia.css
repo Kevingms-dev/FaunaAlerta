@@ -62,6 +62,12 @@
 /*aumenta o tamanho do campo de input de descricao*/
 .desc{
     height: 130px;
+    padding: 10px;
+}
+
+
+.desc::placeholder {
+    position: static;
 }
 
 /* Efeito ao clicar no campo (Foco) */
