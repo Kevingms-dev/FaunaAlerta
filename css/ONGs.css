@@ -12,6 +12,9 @@ h2, h4, h5, p {
     padding: 0;
 }
 
+.titulo{
+    margin-left: 1vh;
+}
 
 /*BARRA DE NAV DE PESQUISA*/
 .formPesquisa{

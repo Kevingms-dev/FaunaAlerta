@@ -162,6 +162,10 @@
 
 /* ===== CARROSSEL NOTÍCIAS ===== */
 
+.carousel-inner{
+    font-family: 'Afacad Flux', sans-serif;
+}
+
 .noticia-img{
     height: 500px;
     object-fit: cover;

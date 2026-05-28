@@ -1,3 +1,9 @@
+/*
+============================================================
+Estilização da página perfil.html
+============================================================
+*/
+
 h1{
     font-family: 'Archivo Black', sans-serif
 }
@@ -60,4 +66,38 @@ span{
 .card-sobre p{
     font-size: 1.2rem;
     line-height: 1.8;
+}
+
+.lista-integrantes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-integrantes li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+    font-family: 'Afacad Flux', sans-serif;
+}
+
+.lista-integrantes li:last-child {
+    border-bottom: none;
+}
+
+.nome-integrante {
+    color: black;
+}
+
+.lista-integrantes a {
+    color: black;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.lista-integrantes a:hover {
+    color: #D47E09;
 }

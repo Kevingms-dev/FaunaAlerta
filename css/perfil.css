@@ -13,16 +13,12 @@ body {
     background-color: #d9d9d9;
 }
 
-/*DEFININDO TAMANHO DA FOTO*/
-.box-perfil {
-    width: 150px; 
-    height: 150px;
-}
-
 /*ESTILIZAÇÃO DO NOME DO USUÁRIO*/
 .box-nome h1 {
     font-size: 3rem; 
     color: #333;
+    font-family: 'Afacad Flux';
+    
 }
 
 /*ESTILIZAÇÃO E ALINHAMENTO DO TÍTULO DO HISTÓRICO DE DENÚNCIA */
@@ -32,6 +28,7 @@ body {
     text-align: center;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    font-family: 'Archivo Black';
 }
 
 /*ESTILIZAÇÃO DA FONTE DO TÍTULO DO HISTÓRICO DE DENÚNCIA */
@@ -69,6 +66,7 @@ body {
     align-items: flex-end;
     margin: 20px;
     justify-content: space-between;
+    font-family: 'Afacad Flux';
 }
 
 /*ESTILIZAÇÃO DO BOTÃO VERIFICAR DENTRO DO CARD DE DENÚNCIA*/
