@@ -35,7 +35,7 @@
 
 .botoes{
     display: flex;
-    gap: 46vh;
+    justify-content: space-between;
 }
 
 /* aparencia do botao*/
