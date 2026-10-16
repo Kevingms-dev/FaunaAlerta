@@ -1,0 +1,236 @@
+import { useState } from 'react'
+import './Login.css'
+import { Helmet } from 'react-helmet-async'
+import '../../global/global.css'
+import Logo1 from '../../assets/Logo1.png'
+import twitterxicone from '../../assets/twitterxicone.png'
+import instragram from '../../assets/instagram.png'
+import facebook from '../../assets/facebook.png'
+
+function Login() {
+
+
+    return (
+        <>
+            <Helmet>
+                <title>SOBRE - FaunaAlerta</title>
+            </Helmet>
+            <header className="Topo">
+                <nav className="navbar navbar-expand-md">
+                    <div className="container">
+
+                        {/*Logo*/}
+
+                        <a className="navbar-brand d-flex align-items-center" href="../index.html">
+                            <img src={Logo1} width="60" alt="Logo" />
+                            <span className="texto-logo ms-2">FaunaAlerta</span>
+                        </a>
+
+                        {/*botão hamburguer*/}
+
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+
+                        {/* Menu */}
+                        <div className="menuu collapse navbar-collapse" id="menu">
+
+                            {/*CRIA LISTA NÃO-ORDENADA*/}
+                            <ul className="navbar-nav mx-auto gap-3">
+
+                                {/* BOTÃO Home */}
+                                <li className="nav-item">
+
+                                    <a className="nav-link menu-btn" href="../index.html">
+                                        <i className="bi bi-house-door fs-4"></i>
+                                        <strong>Home</strong>
+                                    </a>
+                                </li>
+
+                                {/*BOTÃO ONGS*/}
+                                <li className="nav-item">
+
+                                    <a className="nav-link menu-btn " href="../pages/ONGs.html">
+                                        <i className="bi bi-heart fs-4"></i>
+                                        <strong>ONGs</strong>
+                                    </a>
+                                </li>
+
+                                {/* BOTÃO Denúncia */}
+                                <li className="nav-item">
+
+                                    <a className="nav-link menu-btn" href="../pages/denuncia.html">
+                                        <i className="bi bi-megaphone fs-4"></i>
+                                        <strong>Denúncia</strong>
+                                    </a>
+                                </li>
+
+                                {/* BOTÃO Sobre */}
+                                <li className="nav-item">
+
+                                    <a className="nav-link menu-btn" href="../pages/sobre.html">
+                                        <i className="bi bi-info-circle fs-4"></i>
+                                        <strong>Sobre</strong>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            {/* BOTÃO Usuário */}
+                            <a href="../pages/login.html" className="user-btn">
+                                <i className="bi bi-person fs-3"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </nav>
+            </header>
+            <main className="sobre-page">
+
+                {/* O QUE É NOSSO PROJETO */}
+                <section className="container py-5">
+
+                    <h1 className="titulo-secao text-center mb-5">
+                        O QUE É NOSSO PROJETO?
+                    </h1>
+
+                    <div className="card card-sobre mx-auto shadow-sm">
+                        <div className="card-body">
+
+                            <p>
+                                O <span>FaunaAlerta</span> é um projeto de software desenvolvido para auxiliar na preservação
+                                da fauna e flora brasileira por meio da participação da população e do apoio aos
+                                órgãos ambientais. A plataforma foi criada para facilitar denúncias de crimes
+                                ambientais, como tráfico de animais, caça, pesca ilegal e maus-tratos, além do
+                                registro de avistamentos de espécies invasoras ou ameaçadas de extinção.
+                            </p>
+                            <hr/>
+                                <p>
+                                    O sistema permite que os usuários enviem informações sobre ocorrências,
+                                    incluindo fotos, vídeos e localização, tornando a comunicação com órgãos
+                                    responsáveis mais rápida, acessível e organizada. Além disso, o <span>FaunaAlerta</span>
+                                    também busca conscientizar a população sobre a biodiversidade brasileira,
+                                    incentivando a preservação ambiental e o combate à desinformação sobre animais
+                                    silvestres.
+                                </p>
+                                <hr/>
+                                    <p>
+                                        O projeto está alinhado aos <span id="ONU"><b>Objetivos de Desenvolvimento Sustentável da ONU</b></span>,
+                                        principalmente a <span id="ODS14">ODS 14</span> – <span id="ODS14">Vida na Água</span> e a <span id="ODS15">ODS 15</span> – <span id="ODS15">Vida Terrestre</span>.
+                                        A <span id="ODS14">ODS 14</span> tem como objetivo a conservação dos oceanos, mares e recursos marinhos,
+                                        combatendo práticas como a pesca ilegal e a degradação dos ecossistemas
+                                        aquáticos. Já a <span id="ODS15">ODS 15</span> busca proteger os ecossistemas terrestres, preservar
+                                        a biodiversidade, combater o tráfico de animais e reduzir os impactos causados
+                                        por espécies invasoras.
+                                    </p>
+
+
+
+                                </div>
+                        </div>
+
+                </section>
+
+                {/* QUEM SOMOS */}
+                <section className="container py-5">
+
+                    <h1 className="titulo-secao text-center mb-5">
+                        QUEM SOMOS
+                    </h1>
+
+                    <div className="card card-sobre mx-auto shadow-sm">
+                        <div className="card-body">
+
+                            <p>
+                                Somos estudantes do curso de Desenvolvimento de Software Multiplataforma (DSM)
+                                e desenvolvemos o projeto FaunaAlerta como parte do Projeto Integrador, unindo
+                                tecnologia, conscientização ambiental e impacto social.
+
+
+                                O projeto está sendo desenvolvido em Diadema – SP, utilizando tecnologias web como <span id="HTML"><b>HTML5</b></span>,
+                                <span id="CSS"><b>CSS3</b></span> e <span id="JS"><b>JavaScript</b></span>, com foco em acessibilidade, usabilidade e inovação.
+                            </p>
+
+                            <hr/>
+                                <div className="integrantes">
+                                    <p className="mb-2">Equipe:</p>
+                                    <ul className="lista-integrantes">
+                                        <li><span className="nome-integrante">Anselmo Pereira de Lima</span>    <a href="https://github.com/AnselmoPlima"><i className="bi bi-github"></i></a></li>
+                                        <li><span className="nome-integrante">Gustavo Fernández Ferreira</span> <a href="https://github.com/gustavo-ferndez"><i className="bi bi-github"></i></a></li>
+                                        <li><span className="nome-integrante">Marcelo de Souza Siciliano</span> <a href="https://github.com/MarceloFatec2450"><i className="bi bi-github"></i></a></li>
+                                        <li><span className="nome-integrante">Matheus Ferreira Lopes</span>     <a href="https://github.com/MatheusLopes11"><i className="bi bi-github"></i></a></li>
+                                        <li><span className="nome-integrante">Sophia Santoro Rodrigues</span>   <a href="https://github.com/SophiaRodrigues-S"><i className="bi bi-github"></i></a></li>
+                                        <li><span className="nome-integrante">Wagner Acácio da Silva</span>     <a href="https://github.com/pequetux"><i className="bi bi-github"></i></a></li>
+                                    </ul>
+                                </div>
+
+
+                        </div>
+                    </div>
+
+                </section>
+
+
+            </main>
+            <footer className="footer">
+                <div className="container">
+
+                    <div className="row align-items-center">
+
+                        {/* Logo */}
+                        <div className="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
+
+                            <div className="d-flex align-items-center justify-content-center justify-content-md-start">
+                                <img src={Logo1} className="footer-logo" />
+
+                                <h2 className="logo-nome ms-3">
+                                    Fauna<br />Alerta
+                                </h2>
+                            </div>
+
+                        </div>
+
+                        {/* Contato */}
+                        <div className="col-12 col-md-4 text-center mb-4 mb-md-0">
+
+                            <p className="telefone mb-1 ">
+                                <strong>Telefone</strong>
+                                <span>(11) 99999-9999</span>
+                            </p>
+
+                            <p className="email">
+                                <strong>Email</strong>
+                                <a href="mailto:faunalerta@gmail.com"><span>faunalerta@gmail.com</span></a>
+                            </p>
+
+                            <div className="d-flex justify-content-center gap-5 mt-3">
+                                <a href="https://x.com/"> <img src={twitterxicone} className="icone-social" /></a>
+                                <a href="https://www.facebook.com/?locale=pt_BR"> <img src={facebook} className="icone-social" /></a>
+                                <a href="https://www.instagram.com/"> <img src={instragram} className="icone-social" /></a>
+                            </div>
+
+                        </div>
+
+                        {/* Navegação */}
+                        <div className="links-footer col-12 col-md-4 text-center text-md-end">
+
+                            <nav className="footer-nav">
+                                <strong><a href="../index.html">Principal</a></strong>
+                                <strong><a href="../pages/ONGs.html">ONGs</a></strong>
+                                <strong><a href="../pages/denuncia.html">Denúncias</a></strong>
+                                <strong><a href="../pages/sobre.html">Sobre Nós</a></strong>
+                                <strong><a href="../pages/login.html">Login</a></strong>
+                            </nav>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </footer>
+        </>
+    )
+}
+
+export default Login
