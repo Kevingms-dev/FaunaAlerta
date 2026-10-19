@@ -3,7 +3,7 @@ import './Sobre.css'
 import { Helmet } from 'react-helmet-async'
 import '../../global/global.css'
 
-function Login() {
+function Sobre() {
 
     return (
         <>
@@ -101,4 +101,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Sobre

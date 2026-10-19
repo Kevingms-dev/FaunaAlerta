@@ -3,7 +3,7 @@ import './Admin.css'
 import { Helmet } from 'react-helmet-async'
 import '../../global/global.css'
 
-function Login() {
+function Admin() {
     return (
         <>
             <Helmet>
@@ -13,4 +13,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Admin
