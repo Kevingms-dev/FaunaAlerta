@@ -16,10 +16,8 @@ function Login() {
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-12 col-md-8 col-lg-6">
-
-                            <h1 className="text-center mb-4 titulo-cadastro">EFETUE O LOGIN</h1>
-
                             <div className="card-cadastro p-4 p-sm-5">
+                                <h1 className="text-center mb-4 titulo-cadastro">EFETUE O LOGIN</h1>
                                 <form>
 
                                     <div className="mb-4">

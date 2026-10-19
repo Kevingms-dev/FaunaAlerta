@@ -3,6 +3,7 @@ import Logo1 from '../assets/Logo1.png'
 import twitterxicone from '../assets/twitterxicone.png'
 import instragram from '../assets/instagram.png'
 import facebook from '../assets/facebook.png'
+import '../global/global.css'
 
 export function Footer() {
   return (
