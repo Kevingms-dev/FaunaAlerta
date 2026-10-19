@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom' 
 import '../../global/global.css'
 
-function Login() {
+function Denuncia() {
 
     return (
         <>
@@ -81,4 +81,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Denuncia

@@ -3,7 +3,7 @@ import './Perfil.css'
 import { Helmet } from 'react-helmet-async'
 import '../../global/global.css'
 
-function Login() {
+function Perfil() {
 
 
     return (
@@ -78,4 +78,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Perfil
