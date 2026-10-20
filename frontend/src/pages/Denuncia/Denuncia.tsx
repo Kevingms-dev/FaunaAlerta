@@ -3,9 +3,10 @@ import './Denuncia.css'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom' 
 import '../../global/global.css'
+import FormOcorrencia from '../../components/FormDenuncia/FormOcorrencia'
 
 function Denuncia() {
-
+    const [tipo, setTipo] = useState<"alerta" | "denuncia" | null>(null);
     return (
         <>
             <Helmet>
@@ -16,12 +17,15 @@ function Denuncia() {
                 <div className="container-form">
                     <h1 className="titulo">Seleciona uma opção:</h1>
                     <div className="btn-form">
-                    <button className="btn-alerta" type="button">
-                            Alerta
-                        </button>
-                        <button className="btn-denuncia" type="button">
-                            Denúncia
-                        </button>
+                    <button className="btn-alerta" onClick={() => setTipo("alerta")}>
+                        Alerta
+                    </button>
+                    <button className="btn-denuncia" onClick={() => setTipo("denuncia")}>
+                        Denúncia
+                    </button>
+                    </div>
+                    <div>
+                        {tipo && <FormOcorrencia tipo={tipo}/>}
                     </div>
                 </div>
             </main>
