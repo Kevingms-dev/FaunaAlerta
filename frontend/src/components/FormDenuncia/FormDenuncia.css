@@ -1,5 +1,122 @@
-.form-ocorrencia {
+.form-denuncia {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 30px;
+    font-family: 'Afacad Flux', sans-serif;
+}
+
+.campo-denuncia {
+    display: flex;
+    gap: 15px;
+    
+}
+
+#tipo-denuncia {
+    padding: 5px 10px;
+    width: 200px;
+    border: 2px solid #333;
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    border-radius: 6px;
+}
+
+#data-denuncia {
+    padding: 20px 10px;
+    font-size: 20px;
+    width: 180px;
+    height: 30px;
+    border: 2px solid #333;
+    border-radius: 6px;
+}
+
+.denuncia-local {
+    display: flex;
+    gap: 15px;
+
+    & input {
+        padding: 20px 10px;
+        font-size: 20px;
+        width: 400px;
+        height: 40px;
+        border: 2px solid #333;
+        border-radius: 6px;
+    }
+
+    & select {
+        padding: 5px 10px;
+        width: 100px;
+        border: 2px solid #333;
+        background-color: #fff;
+        font-size: 20px;
+        font-weight: normal;
+        border-radius: 6px;
+    }
+}
+
+#localizacao-denuncia {
+    padding: 20px 10px;
+    font-size: 20px;
+    width: 590px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 6px;
+}
+
+#descricao-denuncia {
+    padding: 10px 10px;
+    font-size: 20px;
+    width: 590px;
+    height: 90px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    resize: none;
+}
+
+#file-denuncia {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-label-denuncia {
+    display: flex;
+    justify-content: center;
+    width: 590px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #d9d9d9;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    & .file-text-denuncia {
+        color: #333;
+    }
+}
+
+.container-btn-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.denuncia-enviar {
+    background-color:#14AE5C;
+    border: none;
+    border-radius: 6px;
+    color:#fff !important;
+    font-size: 25px !important;
+}
+
+.denuncia-voltar {
+    background-color: #fff;
+    border: 2px solid #D47E09;
+    border-radius: 6px;
+    font-size: 25px !important;
 }

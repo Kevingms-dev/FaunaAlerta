@@ -1,0 +1,121 @@
+.form-alerta {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    font-family: 'Afacad Flux', sans-serif;
+}
+
+.campo-alerta {
+    display: flex;
+    gap: 15px;
+    
+}
+
+#nome-especie {
+    padding: 20px 10px;
+    font-size: 20px;
+    width: 400px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 6px;
+}
+
+#data-alerta {
+    padding: 20px 10px;
+    font-size: 20px;
+    width: 180px;
+    height: 30px;
+    border: 2px solid #333;
+    border-radius: 6px;
+}
+
+.alerta-local {
+    display: flex;
+    gap: 15px;
+
+    & input {
+        padding: 20px 10px;
+        font-size: 20px;
+        width: 400px;
+        height: 40px;
+        border: 2px solid #333;
+        border-radius: 6px;
+    }
+
+    & select {
+        padding: 5px 10px;
+        width: 100px;
+        border: 2px solid #333;
+        background-color: #fff;
+        font-size: 20px;
+        font-weight: normal;
+        border-radius: 6px;
+    }
+}
+
+#localizacao-alerta {
+    padding: 20px 10px;
+    font-size: 20px;
+    width: 590px;
+    height: 40px;
+    border: 2px solid #333;
+    border-radius: 6px;
+}
+
+#descricao-alerta {
+    padding: 10px 10px;
+    font-size: 20px;
+    width: 590px;
+    height: 90px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    resize: none;
+}
+
+#file-alerta {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-label-alerta {
+    display: flex;
+    justify-content: center;
+    width: 590px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #d9d9d9;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    & .file-text-alerta {
+        color: #333;
+    }
+}
+
+.container-btn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.alerta-enviar {
+    background-color:#14AE5C;
+    border: none;
+    border-radius: 6px;
+    color:#fff !important;
+    font-size: 25px !important;
+}
+
+.alerta-voltar {
+    background-color: #fff;
+    border: 2px solid #D47E09;
+    border-radius: 6px;
+    font-size: 25px !important;
+}

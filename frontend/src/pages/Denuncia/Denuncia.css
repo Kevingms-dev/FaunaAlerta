@@ -2,13 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 57vh;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    min-height: 100vh;
+    height: auto;
 }
 
 .container-form {
     background-color: #fff;
     height: auto;
-    width: 70vh;
+    min-width: 70vh;
     display:flex;
     justify-content: center;
     flex-direction: column;

@@ -3,7 +3,8 @@ import './Denuncia.css'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom' 
 import '../../global/global.css'
-import FormOcorrencia from '../../components/FormDenuncia/FormOcorrencia'
+import FormAlerta from '../../components/FormAlerta/FormAlerta'
+import FormDenuncia from '../../components/FormDenuncia/FormDenuncia'
 
 function Denuncia() {
     const [tipo, setTipo] = useState<"alerta" | "denuncia" | null>(null);
@@ -25,7 +26,8 @@ function Denuncia() {
                     </button>
                     </div>
                     <div>
-                        {tipo && <FormOcorrencia tipo={tipo}/>}
+                        {tipo === "alerta" && <FormAlerta/>}
+                        {tipo === "denuncia" && <FormDenuncia/>}
                     </div>
                 </div>
             </main>

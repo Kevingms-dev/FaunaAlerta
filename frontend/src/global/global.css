@@ -139,6 +139,7 @@ padding-right: 40px;
 .footer{
     background-color: #FFF6F6;
     padding: 30px 0;
+    flex-shrink: 0;
 }
 
 /*TAMANHO DA LOGO*/
