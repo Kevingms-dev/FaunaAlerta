@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './Perfil.css'
 import { Helmet } from 'react-helmet-async'
 import '../../global/global.css'

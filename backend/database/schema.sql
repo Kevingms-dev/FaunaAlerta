@@ -2,23 +2,14 @@ CREATE DATABASE FaunaAlerta;
 
 USE FaunaAlerta;
 
-CREATE TABLE Orgao(
-	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    razao_social VARCHAR(200) NOT NULL,
-    cnpj CHAR(14) NOT NULL UNIQUE,
-    status_cadastro ENUM('Aprovado', 'Pendente', 'Negado') DEFAULT 'Pendente'
-);
-
 CREATE TABLE Usuario(
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(250) NOT NULL,
     email VARCHAR(70) UNIQUE NOT NULL,
+    telefone VARCHAR(20) NULL,
     senha_hash VARCHAR(255) NOT NULL,
     perfil ENUM('Usuario', 'Pesquisador', 'Orgao', 'Admin') DEFAULT 'Usuario',
-    status_cadastro ENUM('Aprovado', 'Pendente', 'Negado') DEFAULT 'Pendente',
-    orgao_id INT UNSIGNED NULL,
-    CONSTRAINT fk_usuario_orgao
-		FOREIGN KEY (orgao_id) REFERENCES Orgao(id) ON DELETE SET NULL
+    status_cadastro ENUM('Aprovado', 'Pendente', 'Negado') DEFAULT 'Pendente'
 );
 
 CREATE TABLE Pesquisadores(
@@ -35,13 +26,10 @@ CREATE TABLE Pesquisadores(
 CREATE TABLE Documentos_verificacao(
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     usuario_id INT UNSIGNED,
-    orgao_id INT UNSIGNED NULL,
     tipo ENUM('COMPROVANTE_VINCULO', 'LATTES', 'CARTAO_CNPJ', 'PORTARIA_NOMEACAO', 'OUTRO') NOT NULL,
     caminho_arquivo VARCHAR(255) NOT NULL,
     CONSTRAINT fk_documentos_usuario
-		FOREIGN KEY (usuario_id) REFERENCES Usuario(id) ON DELETE CASCADE,
-	CONSTRAINT fk_documentos_orgao,
-		FOREIGN KEY (orgao_id) REFERENCES Orgao(id) ON DELETE SET NULL
+		FOREIGN KEY (usuario_id) REFERENCES Usuario(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Denuncias(
@@ -88,12 +76,21 @@ CREATE TABLE Alertas(
     bioma ENUM('AMAZONIA', 'CERRADO', 'MATA ATLANTICA', 'CAATINGA', 'PAMPA', 'PANTANAL') NULL,
     data_avistamento DATE NOT NULL,
     descricao TEXT NULL,
-    foto_url VARCHAR(500) NULL,
-    situacao('PENDENTE', 'VERIFICADO', 'REJEITADO') NOT NULL DEFAULT 'PENDENTE',
+    situacao ENUM('PENDENTE', 'VERIFICADO', 'REJEITADO') NOT NULL DEFAULT 'PENDENTE',
     CONSTRAINT fk_alerta_especie 
 		FOREIGN KEY (especie_id) REFERENCES Especie(id) ON DELETE SET NULL,
     CONSTRAINT fk_alerta_usuario
 		FOREIGN KEY (usuario_id) REFERENCES Usuario(id) ON DELETE SET NULL
+);
+
+CREATE TABLE Alerta_midias (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    alerta_id INT UNSIGNED NOT NULL,
+    tipo ENUM('FOTO', 'VIDEO') NOT NULL,
+    url VARCHAR(500) NOT NULL,
+    PRIMARY KEY (id),
+    CONSTRAINT fk_alerta_midia FOREIGN KEY (alerta_id)
+		REFERENCES Alertas(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Noticia(
@@ -115,16 +112,31 @@ CREATE TABLE ONG(
 );
 
 -- Tabela de simulação pro banco de dados do órgão, simular através do mock
+CREATE DATABASE Orgao_mock;
+USE Orgao_mock;
+
 CREATE TABLE Denuncias_recebidas( 
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     protocolo VARCHAR(20) NOT NULL UNIQUE,
     tipo ENUM('CACA', 'PESCA', 'MAUS_TRATOS', 'TRAFICO', 'OUTRO') NOT NULL,
     descricao TEXT NOT NULL,
     local_descricao VARCHAR(255) NULL,
+    data_ocorrencia DATE NULL,
     status_denun ENUM('Recebida', 'Em_validacao', 'Em_resolucao', 'Concluida', 'Rejeitada') NOT NULL DEFAULT 'Recebida',
     recebida_em DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE Denuncia_midias (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    denuncia_id INT UNSIGNED NOT NULL,
+    tipo ENUM('FOTO', 'VIDEO') NOT NULL,
+    url VARCHAR(500) NOT NULL,
+    denunciante_nome VARCHAR(150) NULL,
+    denunciante_email VARCHAR(150) NULL,
+    denunciante_telefone VARCHAR(20) NULL,
+    CONSTRAINT fk_denuncia_midia FOREIGN KEY (denuncia_id)
+		REFERENCES Denuncias_recebidas(id) ON DELETE CASCADE
+);
 
 
 
