@@ -1,57 +1,101 @@
+.main-cadastro {
+    font-family: 'Afacad Flux', sans-serif;
+    background-color: #4e3f37;
+}
+
+.container-cadastro {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #f7f1ee;
+    overflow: hidden; /* a imagem nunca vaza do cartão */
+}
+
+/* A imagem NÃO define a altura: ela só preenche o espaço que o formulário criou */
+.imagem-cadastro {
+    position: relative;
+    flex: 0 0 40%;
+
+    & img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* corta a foto em vez de distorcer */
+    }
+}
+
+.box-cadastros {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: clamp(16px, 3vw, 32px); /* mínimo 16px, máximo 32px */
+}
+
 .titulo-cadastro {
-    font-family: 'Archivo Black', sans-serif;
-    color: #000000;
-    font-size: 2rem;
-    letter-spacing: 1px;
+    font-family: 'Afacad Flux', sans-serif;
+    font-weight: bold;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0;
 }
 
-/* Card branco que envolve o formulário */
-.card-cadastro {
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+.campo-cadastro {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    & input {
+        padding: 4px 10px;
+        border: 2px solid #333;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
 }
 
-/* Labels dos campos (Nome, E-mail, etc.) */
-.label-cadastro {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: #000000;
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+.termos-cadastro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    & input {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+    & label {
+        font-size: 1rem;
+
+        & strong {
+            color: #14ae5c;
+        }
+    }
 }
 
-/* Inputs cinzas idênticos ao protótipo */
-.input-cadastro {
-    background-color: #D9D9D9 !important; /* Força o fundo cinza sobre o padrão do Bootstrap */
-    border: 1px solid #A6A6A6 !important;
+.btn-cadastro {
+    width: 100%;
+    padding: 8px;
+    border: none;
     border-radius: 6px;
-    padding: 10px 15px;
-    font-family: 'Poppins', sans-serif;
-    color: #333333;
+    background-color: #4e3f37;
+    color: #f7f1ee;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-/* Efeito ao clicar no campo (Foco) */
-.input-cadastro:focus {
-    background-color: #E2E2E2 !important;
-    border-color: #D47E09 !important;
-    box-shadow: 0 0 0 0.25rem rgba(212, 126, 9, 0.25) !important;
-}
+.verifica-login {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
 
-/* Botão CADASTRAR (Vazado/Outline e Arredondado) */
-.btn-cadastro-laranja {
-    background-color: transparent;
-    border: 3px solid #D47E09;
-    color: #D47E09;
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 1.2rem;
-    padding: 8px 50px;
-    border-radius: 30px;
-    transition: 0.3s ease;
-}
-
-/* Efeito Hover (Preenche o botão ao passar o mouse) */
-.btn-cadastro-laranja:hover {
-    background-color: #D47E09;
-    color: #FFFFFF;
+    & strong {
+       color: #14ae5c;
+       text-decoration: underline; 
+    }
 }

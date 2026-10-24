@@ -1,57 +1,69 @@
-import { useState } from 'react'
 import './Cadastro.css'
 import { Helmet } from 'react-helmet-async'
 import '../../global/global.css'
+import { Link } from 'react-router-dom'
+import foto_cadastro from '../../assets/foto_cadastro.jpg'
 
-function Login() {
-
-
+function Cadastro() {
     return (
         <>
             <Helmet>
-                <title>Cadastro - FaunaAlerta</title>
+                <title>CADASTRO - FaunaAlerta</title>
             </Helmet>
-            
-            <main className="d-flex align-items-center justify-content-center py-5">
-                <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-12 col-md-8 col-lg-6">
 
-                            <h1 className="text-center mb-4 titulo-cadastro">EFETUE O CADASTRO</h1>
+            <main className="main-cadastro flex-grow-1 d-flex align-items-center justify-content-center py-4 px-3">
+                <div className="container-cadastro">
+                    <div className="imagem-cadastro d-none d-md-block">
+                        <img src={foto_cadastro} alt="imagem de cadastro" />
+                    </div>
 
-                            <div className="card-cadastro p-4 p-sm-5">
-                                <form>
-                                    <div className="mb-4">
-                                        <label className="form-label label-cadastro">Nome</label>
-                                        <input type="text" className="form-control input-cadastro" placeholder="Seu Nome" required id="nomeCadastro"/>
-                                    </div>
+                    <div className="box-cadastros">
+                        <h1 className="titulo-cadastro">CRIE UMA CONTA</h1>
 
-                                    <div className="mb-4">
-                                        <label className="form-label label-cadastro">E-mail</label>
-                                        <input type="email" className="form-control input-cadastro" placeholder="E-mail" required id="emailCadastro"/>
-                                    </div>
-
-                                    <div className="mb-4">
-                                        <label className="form-label label-cadastro">Telefone</label>
-                                        <input type="tel" className="form-control input-cadastro" placeholder="Seu Telefone" required id="telCadastro"/>
-                                    </div>
-
-                                    <div className="mb-5">
-                                        <label className="form-label label-cadastro">Criar senha</label>
-                                        <input type="password" className="form-control input-cadastro" placeholder="Senha" required id="senhaCadastro"/>
-                                    </div>
-
-                                    <div className="text-center">
-                                        <button className="btn btn-cadastro-laranja" >CADASTRAR</button>
-                                    </div>
-                                </form>
+                        <form className="form-cadastro row g-3">
+                            <div className="campo-cadastro col-md-12">
+                                <label htmlFor="nome">Digite seu nome:</label>
+                                <input name="nome" type="text" id="nome" placeholder="Insira seu nome" required />
                             </div>
-                        </div>
+
+                            <div className="campo-cadastro col-md-12">
+                                <label htmlFor="telefone">Digite seu telefone:</label>
+                                <input name="telefone" type="tel" id="telefone" placeholder="Insira seu telefone com DDD" required />
+                            </div>
+
+                            <div className="campo-cadastro col-12">
+                                <label htmlFor="email">Digite seu email:</label>
+                                <input name="email" type="email" id="email" placeholder="Insira seu e-mail" required />
+                            </div>
+
+                            <div className="campo-cadastro col-md-12">
+                                <label htmlFor="senha">Crie uma senha:</label>
+                                <input name="senha" type="password" id="senha" placeholder="Insira uma senha" required />
+                            </div>
+                            <div className="campo-cadastro col-md-12">
+                                <label htmlFor="confirmar-senha">Confirme sua senha:</label>
+                                <input name="confirmarSenha" type="password" id="confirmar-senha" placeholder="Confirme a senha" required />
+                            </div>
+
+                            <div className="termos-cadastro col-12">
+                                <input type="checkbox" id="termos" required />
+                                <label htmlFor="termos">Li e aceito os <strong>Termos e Condições</strong> e a <strong>Política de Privacidade</strong></label>
+                            </div>
+
+                            <div className="col-12">
+                                <p className="verifica-login">
+                                    Já tem uma conta? <Link to="/Login"><strong>Faça o login</strong></Link>
+                                </p>
+                            </div>
+                            <div className="col-12">
+                                <button type="submit" className="btn-cadastro">Criar conta</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </main> 
+            </main>
         </>
     )
 }
 
-export default Login
+export default Cadastro
