@@ -12,7 +12,7 @@ CREATE TABLE Usuario(
     status_cadastro ENUM('Aprovado', 'Pendente', 'Negado') DEFAULT 'Pendente'
 );
 
-CREATE TABLE Pesquisadores(
+CREATE TABLE Pesquisador(
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     usuario_id INT UNSIGNED,
     instituicao VARCHAR(200) NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE Denuncia_historico_status(
     origem ENUM('ORGAO', 'SISTEMA') NOT NULL,
     criado_em DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_historico_denuncia
-		FOREIGN KEY (denuncia_id) REFERENCES Denuncia(id) ON DELETE CASCADE
+		FOREIGN KEY (denuncia_id) REFERENCES Denuncias(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Especies(
@@ -78,7 +78,7 @@ CREATE TABLE Alertas(
     descricao TEXT NULL,
     situacao ENUM('PENDENTE', 'VERIFICADO', 'REJEITADO') NOT NULL DEFAULT 'PENDENTE',
     CONSTRAINT fk_alerta_especie 
-		FOREIGN KEY (especie_id) REFERENCES Especie(id) ON DELETE SET NULL,
+		FOREIGN KEY (especie_id) REFERENCES Especies(id) ON DELETE SET NULL,
     CONSTRAINT fk_alerta_usuario
 		FOREIGN KEY (usuario_id) REFERENCES Usuario(id) ON DELETE SET NULL
 );
@@ -103,7 +103,7 @@ CREATE TABLE Noticia(
 
 CREATE TABLE ONG(
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(15) NOT NULL,
+    nome VARCHAR(150) NOT NULL,
     descricao TEXT NULL,
     contato VARCHAR(150) NULL,
     site VARCHAR(255) NULL,
