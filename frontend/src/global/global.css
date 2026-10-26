@@ -1,8 +1,7 @@
 /* ESTILIZAÇÃO DO TEXTO DA LOGO */
 .texto-logo{
     font-family: 'Archivo Black', sans-serif;
-    color: #D47E09;
-    
+    color: #b1470bff;
 }
 
 a{
@@ -83,10 +82,10 @@ a{
 /*BOTAO USUARIO*/
 .user-btn{
 
-    width: 50px;
+    width: 80px;
     height: 50px;
 
-    border-radius: 50%;
+    border-radius: 30%;
 
     display: flex;
     align-items: center;
@@ -94,7 +93,7 @@ a{
 
     text-decoration: none;
 
-    color: #0d6efd;
+    color: black;
 
     transition: 0.3s;
 }
@@ -150,7 +149,7 @@ padding-right: 40px;
 
 /*ESTILIZAÇÃO DO TEXTO DA LOGO*/
 .logo-nome{
-    color: #D47E09;
+    color: #b1470bff;
     font-size: 2.5rem;
     font-weight: bold;
     line-height: 1;
@@ -174,7 +173,7 @@ padding-right: 40px;
 
 /*COR DO TELEFONE E E-MAIL*/
 .footer span{
-    color: #D47E09;
+    color: #b1470bff;
 }
 
 
@@ -238,3 +237,4 @@ padding-right: 40px;
 .telefone{
     margin-right: 3vh;
 }
+

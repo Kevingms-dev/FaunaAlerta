@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo1 from '../assets/Logo1.png'
+import Logo from '../assets/FaunaAlertaLogo.svg'
 import twitterxicone from '../assets/twitterxicone.png'
 import instragram from '../assets/instagram.png'
 import facebook from '../assets/facebook.png'
@@ -14,7 +14,7 @@ export function Footer() {
           {/* Logo */}
           <div className="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
             <div className="d-flex align-items-center justify-content-center justify-content-md-start">
-              <img src={Logo1} className="footer-logo" alt="Logo FaunaAlerta" />
+              <img src={Logo} className="footer-logo" alt="Logo FaunaAlerta" />
               <h2 className="logo-nome ms-3">
                 Fauna<br />Alerta
               </h2>
@@ -48,7 +48,7 @@ export function Footer() {
 
           {/* Navegação do Rodapé */}
           <div className="links-footer col-12 col-md-4 text-center text-md-end">
-            <nav className="footer-nav d-flex flex-column flex-md-row justify-content-md-end gap-3">
+            <nav className="footer-nav d-flex flex-column flex-md-column justify-content-md-end gap-3">
               <strong><Link to="/">Principal</Link></strong>
               <strong><Link to="/denuncia">Denúncias</Link></strong>
               <strong><Link to="/sobre">Sobre Nós</Link></strong>

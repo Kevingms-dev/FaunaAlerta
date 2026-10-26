@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Logo1 from '../assets/Logo1.png';
+import Logo from '../assets/FaunaAlertaLogo.svg';
 import '../global/global.css'
 
 export function NavBar() {
@@ -9,8 +9,8 @@ export function NavBar() {
                 <div className="container">
                     {/* Logo */}
                     <Link className="navbar-brand d-flex align-items-center" to="/">
-                        <img src={Logo1} width="60" alt="Logo" />
-                        <span className="texto-logo ms-2">FaunaAlerta</span>
+                        <img src={Logo} width="60" alt="Logo" />
+                        <span className="texto-logo ms-2">FaunAlerta</span>
                     </Link>
                     {/* Botão Hambúrguer (Bootstrap) */}
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -26,11 +26,19 @@ export function NavBar() {
                         {/* Botão Home */}
                         <li className="nav-item">
                             <Link className="nav-link menu-btn" to="/">
-                            <i className="bi bi-house-door fs-4"></i>
-                            <strong>Home</strong>
+                                <i className="bi bi-house-door fs-4"></i>
+                                <strong>Home</strong>
                             </Link>
                         </li>
 
+                        {/*Botão Ongs*/}
+                        <li className="nav-item">
+                        
+                            <Link className="nav-link menu-btn " to="/Ong">
+                                <i className="bi bi-heart fs-4"></i>
+                                <strong>ONGs</strong>  
+                            </Link>
+                        </li>                       
                         {/* Botão Denúncia */}
                         <li className="nav-item">
                             <Link className="nav-link menu-btn" to="/denuncia">
@@ -51,7 +59,8 @@ export function NavBar() {
 
                         {/* Botão Usuário (Login) */}
                         <Link to="/login" className="user-btn">
-                        <i className="bi bi-person fs-3"></i>
+                            <i className="bi bi-person fs-3"></i>
+                            <strong>Perfil</strong>
                         </Link>
 
                     </div>
