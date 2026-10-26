@@ -6,6 +6,9 @@ import Denuncia from './pages/Denuncia/Denuncia.tsx'
 import Cadastro from './pages/Cadastro/Cadastro.tsx'
 import Admin from './pages/Admin/Admin.tsx'
 import Pesquisador from './pages/Pesquisador/Pesquisador.tsx'
+import Ong from './pages/ONG/Ong.tsx'
+import PagOng from './pages/PagOng/PagOng.tsx'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { NavBar } from './components/NavBar.tsx'
 import { Footer } from './components/Footer.tsx'
@@ -23,7 +26,9 @@ export function App() {
           <Route path="/denuncia" element={<Denuncia />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/Pesquisadpr" element={<Pesquisador />} />
+          <Route path="/Pesquisador" element={<Pesquisador />} />
+          <Route path="/ONG" element={<Ong />} />
+          <Route path="/PagOng" element={<PagOng />} />
         </Routes>
         <Footer/>
     </BrowserRouter>

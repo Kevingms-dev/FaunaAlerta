@@ -1,7 +1,5 @@
 import './FormDenuncia.css'
 
-
-
 function FormDenuncia () {
     return (
         <form className="form-denuncia">

@@ -87,3 +87,11 @@ h2, h4, h5, p {
     border-color: #D47E09;
 
 }
+
+.OngsLogos {
+    display: block;
+    justify-self: center;
+    width: 60%;
+    border-radius: 100%;
+    object-fit: cover;
+}
